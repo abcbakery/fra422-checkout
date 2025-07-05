@@ -199,3 +199,8 @@ body {
 .payment-page .pickup-button {
   margin-bottom: 8px;
 }
+
+/* payment 페이지 전용 타이틀 스타일 */
+.payment-title {
+  margin-top: 50px;  /* 원하는 만큼 아래로 내리기 */
+}
