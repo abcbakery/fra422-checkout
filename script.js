@@ -1,10 +1,10 @@
 const productData = {
   "PERFUME": [
-    { name: "퍼퓸 원 (50ML)", price: 119000, image: "image/perfume/won.png" },
-    { name: "퍼퓸 테오 (50ML)", price: 119000, image: "image/perfume/teo.png" },
-    { name: "퍼퓸 엘 (50ML)", price: 119000, image: "image/perfume/el.png" },
-    { name: "퍼퓸 킴 (50ML)", price: 119000, image: "image/perfume/kim.png" },
-    { name: "퍼퓸 하니 (50ML)", price: 119000, image: "image/perfume/hani.png" }
+    { name: "퍼퓸 원 (50ML)", price: 119000, image: "image/perfume/WON.png" },
+    { name: "퍼퓸 테오 (50ML)", price: 119000, image: "image/perfume/TEO.png" },
+    { name: "퍼퓸 엘 (50ML)", price: 119000, image: "image/perfume/EL.png" },
+    { name: "퍼퓸 킴 (50ML)", price: 119000, image: "image/perfume/KIM.png" },
+    { name: "퍼퓸 하니 (50ML)", price: 119000, image: "image/perfume/HANI.png" }
   ],
   "TRAVEL-SIZE PERFUME": [
     { name: "트래블 퍼퓸 1 (10ML)", price: 48000, image: "img/travel1.jpg" }
