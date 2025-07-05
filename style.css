@@ -194,3 +194,8 @@ body {
   color: #fff !important;
   border-color: #000;
 }
+
+/* payment.html에서만 버튼 간격 줄이기 */
+.payment-page .pickup-button {
+  margin-bottom: 8px;
+}
