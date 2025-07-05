@@ -128,8 +128,8 @@ function updateTotal() {
       i++;
     });
   }
-  document.getElementById("totalCount").textContent = totalQty;
-  document.getElementById("totalPrice").textContent = totalPrice.toLocaleString() + " 원";
+  document.getElementById("summaryText").innerText = `구매하기 / ${totalCount}개`;
+
 }
 
 function goToNext() {
