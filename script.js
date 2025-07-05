@@ -143,3 +143,35 @@ function goToNext() {
 }
 
 renderAllCategories();
+
+function goToNext() {
+  const selectedItems = [];
+  let i = 0;
+
+  for (const category in productData) {
+    productData[category].forEach((item) => {
+      const qty = cart[i];
+      if (qty > 0) {
+        selectedItems.push({
+          name: item.name,
+          price: item.price,
+          quantity: qty,
+          image: item.image
+        });
+      }
+      i++;
+    });
+  }
+
+  if (selectedItems.length === 0) {
+    alert("상품을 한 개 이상 선택해 주세요.");
+    return;
+  }
+
+  // localStorage에 저장
+  localStorage.setItem("cartItems", JSON.stringify(selectedItems));
+
+  // 페이지 이동
+  location.href = "checkout.html";
+}
+
