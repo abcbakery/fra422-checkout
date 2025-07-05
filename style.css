@@ -53,11 +53,13 @@ body {
 .product-name {
   font-size: 16px;
   font-weight: 500;
+  text-align: left;
 }
 
 .product-price {
   font-size: 14px;
   color: #888;
+  text-align: left;
 }
 
 .qty-controls {
