@@ -70,12 +70,9 @@ function renderAllCategories() {
 
 function changeQty(index, delta) {
   cart[index] = Math.max(0, cart[index] + delta);
-
-  // 선택 해제 시 전체 상태도 리셋
   if (cart[index] === 0) {
     document.getElementById(`item-${index}`).classList.remove("selected");
   }
-
   updateQtyView(index);
   updateTotal();
 }
@@ -92,8 +89,6 @@ function toggleSelection(index) {
   updateTotal();
 }
 
-
-
 function updateQtyView(index) {
   const qtyEl = document.getElementById(`qty-${index}`);
   const qty = cart[index];
@@ -105,11 +100,9 @@ function updateQtyView(index) {
       <button onclick="changeQty(${index}, 1); event.stopPropagation()">+</button>
     `;
   } else {
-    qtyEl.innerHTML = ``; // 아무것도 안 보여줌
+    qtyEl.innerHTML = ``;
   }
 }
-
-
 
 function updateAllQtyViews() {
   for (let i = 0; i < cart.length; i++) {
@@ -130,19 +123,9 @@ function updateTotal() {
     });
   }
 
-  // 구매하기 버튼 텍스트 업데이트
   document.getElementById("summaryText").innerText = `구매하기 / ${totalQty}개`;
-
-  // 가격 표시 업데이트
   document.getElementById("totalPrice").innerText = `${totalPrice.toLocaleString()}원`;
 }
-
-
-function goToNext() {
-  alert("선택된 상품 수: " + cart.reduce((a, b) => a + b, 0));
-}
-
-renderAllCategories();
 
 function goToNext() {
   const selectedItems = [];
@@ -168,10 +151,19 @@ function goToNext() {
     return;
   }
 
-  // localStorage에 저장
   localStorage.setItem("cartItems", JSON.stringify(selectedItems));
-
-  // 페이지 이동
   location.href = "delivery.html";
 }
 
+function selectMethod(method) {
+  const cartData = JSON.parse(localStorage.getItem('cartItems'));
+  localStorage.setItem("pickupOrDelivery", method);
+
+  if (method === 'pickup') {
+    location.href = "payment.html?method=pickup";
+  } else if (method === 'delivery') {
+    location.href = "personal_info.html";
+  }
+}
+
+renderAllCategories();
