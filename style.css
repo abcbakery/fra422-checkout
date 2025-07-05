@@ -80,17 +80,17 @@ body {
 }
 
 .buy-button {
-  all: unset;
-  width: 100%;
-  background: transparent;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background-color: black;
+  border: none;
 }
 
 
