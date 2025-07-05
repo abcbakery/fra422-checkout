@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>배송 정보 입력</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src="image/logo.png" alt="FRA422 로고" class="logo" />
+
+  <div class="form-wrapper">
+    <form id="shipping-form">
+      <label>이름 <span class="required">*</span></label>
+      <input type="text" name="name" required />
+
+      <label>핸드폰 <span class="required">*</span></label>
+      <input type="tel" name="phone" required />
+
+      <label>이메일 주소</label>
+      <input type="email" name="email" />
+
+      <label>우편번호 <span class="required">*</span></label>
+      <div class="zip-search">
+        <input type="text" name="zipcode" required />
+        <button type="button" class="search-button">검색</button>
+      </div>
+
+      <label>주소 <span class="required">*</span></label>
+      <input type="text" name="address1" required />
+      <input type="text" name="address2" placeholder="상세주소" />
+
+      <label>배송메세지</label>
+      <textarea name="message"></textarea>
+
+      <button type="submit" class="submit-button">결제하기</button>
+    </form>
+  </div>
+</body>
+</html>
