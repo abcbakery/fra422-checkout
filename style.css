@@ -1,48 +1,56 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Pretendard', sans-serif;
   background: #fff;
   max-width: 400px;
   margin: 0 auto;
 }
+
 .header {
   font-size: 14px;
-  color: #999;           /* 회색 텍스트 */
-  text-align: center;    /* 중앙 정렬 */
+  color: #999;
+  text-align: center;
   padding: 20px 0 10px;
 }
+
 .section-title {
   font-size: 14px;
   font-weight: bold;
-  margin: 20px 0 8px 0; /* 위 12px, 아래 4px */
+  margin: 20px 0 8px 0;
   padding: 0 10px;
 }
+
 .product-item {
   display: flex;
   align-items: center;
   padding: 12px 20px;
   border-bottom: 1px solid #eee;
-  margin-bottom: 0px;  /* 제품 간 간격도 줄이기 */
+  margin-bottom: 0px;
   cursor: pointer;
 }
+
 .product-item.selected {
   background-color: #f0f0f0;
   border-radius: 0px;
 }
+
 .product-img {
   width: 72px;
   height: 72px;
   object-fit: cover;
-  transform: scale(1.2);     /* 확대 비율 (기본은 1) */
-  transform-origin: center;  /* 중앙 기준으로 확대 */
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 .product-info {
   flex: 1;
   padding: 0 12px;
 }
+
 .product-name {
-  font-size: 16px;     /* 기존보다 약간 큼 */
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -66,17 +74,24 @@ body {
   font-size: 16px;
   margin: 0 4px;
 }
+
 .footer {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 400px;   /* 바디와 너비 통일 */
+  max-width: 400px;
   background-color: black;
   color: white;
-  padding: 20px 0;    /* 높이 넉넉히 */
+  padding: 20px 0;
   z-index: 1000;
+}
+
+.footer-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 8px 12px;
 }
 
 .buy-button {
@@ -91,35 +106,18 @@ body {
   color: white;
   background-color: black;
   border: none;
+  letter-spacing: 0.3px; /* 📌 전체 자간 살짝 여유 있게 */
 }
-
-
-.footer-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 8px 12px; /* 기존의 좌우 패딩은 여기서 */
-}
-
-
-.buy-button .top-line {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.buy-button .bottom-line {
-  font-size: 20px;
-  font-weight: 700;
-}
-
 
 .buy-button span:first-child {
-  margin-left: 4px;  /* '구매하기 /' 와 '0개' 간격 조절 */
+  margin-left: 4px;
   font-weight: 600;
+  letter-spacing: -0.3px; /* 📌 '구매하기 / 0개' 사이 간격 줄이기 */
 }
 
 .buy-button span:last-child {
   font-size: 18px;
   font-weight: 700;
-  margin-top: 4px;   /* 가격과 개수 사이 여백 */
+  margin-top: 4px;
+  letter-spacing: 0.2px; /* 📌 가격은 살짝 여유 있게 */
 }
-
