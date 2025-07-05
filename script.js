@@ -33,9 +33,9 @@ const productData = {
     { name: "파인 (15ML)", price: 19000, image: "image/diffuser/pine.png" },
     { name: "로즈 (15ML)", price: 159000, image: "image/diffuser/rose.png" },
     { name: "로즈마리 (15ML)", price: 19000, image: "image/diffuser/rosemary.png" },
-    { name: "지속가능한, 422로즈우드 (15ML)", price: 42000, image: "image/diffuser/422 rosewood.png" },
-    { name: "지속가능한, 422샌달우드 (15ML)", price: 42000, image: "image/diffuser/422샌달우드.png" },
-    { name: "지속가능한, 422가이악 (15ML)", price: 42000, image: "image/diffuser/422 guaiac.png" }
+    { name: "지속가능한, 422로즈우드 (15ML)", price: 42000, image: "image/diffuser/422rosewood.png" },
+    { name: "지속가능한, 422샌달우드 (15ML)", price: 42000, image: "image/diffuser/422sandalwood.png" },
+    { name: "지속가능한, 422가이악 (15ML)", price: 42000, image: "image/diffuser/422guaiac.png" }
   ]
 };
 
