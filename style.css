@@ -72,11 +72,25 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 400px;
+  max-width: 400px;   /* 바디와 너비 통일 */
   background-color: black;
   color: white;
-  padding: 16px 0;
+  padding: 20px 0;    /* 높이 넉넉히 */
   z-index: 1000;
+}
+
+.buy-button {
+  all: unset;
+  width: 100%;
+  background: transparent;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .footer-container {
@@ -85,17 +99,6 @@ body {
   padding: 8px 12px; /* 기존의 좌우 패딩은 여기서 */
 }
 
-.buy-button {
-  all: unset;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
 
 .buy-button .top-line {
   font-size: 16px;
