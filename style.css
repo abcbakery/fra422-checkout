@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #fff;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .header {
   font-size: 14px;
@@ -22,22 +24,26 @@ body {
   cursor: pointer;
 }
 .product-img {
-  width: 60px;
-  height: 60px;
+  width: 72px;      /* 기존 60px → 72px */
+  height: 72px;     /* 높이도 맞춰줌 */
   object-fit: cover;
   border-radius: 6px;
 }
+
 .product-info {
   flex: 1;
   padding: 0 12px;
 }
 .product-name {
-  font-size: 14px;
+  font-size: 16px;     /* 기존보다 약간 큼 */
+  font-weight: 500;
 }
+
 .product-price {
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #888;
 }
+
 .qty-controls {
   display: flex;
   align-items: center;
@@ -45,12 +51,12 @@ body {
 }
 .qty-controls button {
   all: unset;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
 }
 .qty-controls span {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 4px;
 }
 .footer {
