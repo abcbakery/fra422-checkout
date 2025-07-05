@@ -155,22 +155,27 @@ body {
 
 .pickup-button {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;           /* ✅ 부모 기준으로 꽉 채움 */
-  max-width: 300px;      /* ✅ 너무 넓어지지 않도록 제한 */
-  margin: 0 auto 16px;
-  padding: 16px 0;
+  justify-content: center;
+  width: 100%;                /* 부모 기준으로 꽉 차게 */
+  max-width: 320px;           /* 고정 최대 폭 */
+  height: 56px;               /* 버튼 높이 고정 */
+  margin: 10px auto;
+  padding: 0 16px;            /* 좌우 여백 */
+  border: 1.5px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
   font-size: 18px;
-  font-weight: 600;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
-  color: #000;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-sizing: border-box;     /* padding 포함 너비 계산 */
 }
 
+.pickup-button img.icon {
+  height: 24px;
+  margin-right: 10px;
+  flex-shrink: 0;             /* 이미지 크기 줄어들지 않게 */
+}
 
 .pickup-button:hover {
   background-color: #000;
