@@ -44,8 +44,14 @@ body {
   gap: 10px;
 }
 .qty-controls button {
-  width: 26px;
-  height: 26px;
+  all: unset;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.qty-controls span {
+  font-size: 14px;
+  margin: 0 4px;
 }
 .footer {
   position: fixed;
