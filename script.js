@@ -40,24 +40,29 @@ function renderAllCategories() {
   updateAllQtyViews();
 }
 
-function toggleSelection(index) {
-  cart[index] = cart[index] === 0 ? 1 : 0;
+function changeQty(index, delta) {
+  cart[index] = Math.max(0, cart[index] + delta);
   updateQtyView(index);
   updateTotal();
 }
 
 function updateQtyView(index) {
   const qtyEl = document.getElementById(`qty-${index}`);
-  if (cart[index] === 1) {
+  const qty = cart[index];
+
+  if (qty > 0) {
     qtyEl.innerHTML = `
-      <button onclick="toggleSelection(${index}); event.stopPropagation()">-</button>
-      <span>1</span>
-      <button disabled>+</button>
+      <button onclick="changeQty(${index}, -1); event.stopPropagation()">-</button>
+      <span>${qty}</span>
+      <button onclick="changeQty(${index}, 1); event.stopPropagation()">+</button>
     `;
   } else {
-    qtyEl.innerHTML = "";
+    qtyEl.innerHTML = `
+      <button onclick="changeQty(${index}, 1); event.stopPropagation()">+</button>
+    `;
   }
 }
+
 
 function updateAllQtyViews() {
   for (let i = 0; i < cart.length; i++) {
