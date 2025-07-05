@@ -14,7 +14,7 @@ body {
 .section-title {
   font-size: 14px;
   font-weight: bold;
-  margin: 12px 0 4px 0; /* 위 12px, 아래 4px */
+  margin: 8px 0 4px 0; /* 위 12px, 아래 4px */
   padding: 0 10px;
 }
 .product-item {
@@ -30,8 +30,8 @@ body {
   border-radius: 0px;
 }
 .product-img {
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
   transform: scale(1.2);     /* 확대 비율 (기본은 1) */
   transform-origin: center;  /* 중앙 기준으로 확대 */
