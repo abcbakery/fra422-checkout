@@ -138,10 +138,16 @@ body {
   align-items: center;
 }
 
+/* 중앙 정렬이 필요한 수령 방법 선택 화면에만 적용 */
 .pickup-container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  min-height: 60vh;
+  justify-content: center;
+  text-align: center;
 }
-
 .pickup-title {
   font-size: 18px;
   font-weight: 700;
