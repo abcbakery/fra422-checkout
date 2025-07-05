@@ -245,14 +245,27 @@ textarea {
   gap: 8px;
 }
 
+.zip-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.zip-row input {
+  flex: 1;
+}
+
 .search-button {
   background-color: black;
   color: white;
   font-weight: bold;
-  padding: 12px 16px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  height: 100%; /* 버튼이 인풋 높이와 맞춰짐 */
+  box-sizing: border-box;
 }
 
 .submit-button {
