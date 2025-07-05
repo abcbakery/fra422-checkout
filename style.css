@@ -73,12 +73,14 @@ body {
   width: 100%;
   background-color: black;
   color: white;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: inherit;
+  padding: 12px 0;
   z-index: 1000;
+}
+
+.footer-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 20px; /* 기존의 좌우 패딩은 여기서 */
 }
 
 .buy-button {
