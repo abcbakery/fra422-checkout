@@ -121,6 +121,7 @@ function updateTotal() {
   let totalQty = 0;
   let totalPrice = 0;
   let i = 0;
+
   for (const category in productData) {
     productData[category].forEach((item) => {
       totalQty += cart[i];
@@ -128,9 +129,14 @@ function updateTotal() {
       i++;
     });
   }
-  document.getElementById("summaryText").innerText = `구매하기 / ${totalCount}개`;
 
+  // 구매하기 버튼 텍스트 업데이트
+  document.getElementById("summaryText").innerText = `구매하기 / ${totalQty}개`;
+
+  // 가격 표시 업데이트
+  document.getElementById("totalPrice").innerText = `${totalPrice.toLocaleString()}원`;
 }
+
 
 function goToNext() {
   alert("선택된 상품 수: " + cart.reduce((a, b) => a + b, 0));
