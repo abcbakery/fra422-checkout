@@ -4,90 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>결제 방식 선택</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      background-color: white;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 60px;
-    }
-
-    .subtitle {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-
-    .payment-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 320px;
-      margin: 10px auto;
-      padding: 16px;
-      border: 1.5px solid #ccc;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      background-color: white;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .payment-button img {
-      height: 24px;
-      margin-right: 8px;
-    }
-
-    .payment-button:hover {
-      background-color: #f5f5f5;
-    }
-
-    .logo {
-    width: 160px;
-    margin: 40px auto 20px;
-    display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <img src="image/logo.png" alt="FRA422 로고" class="logo" />
 
-  <div class="subtitle">결제 방식을 선택해 주세요</div>
+  <div class="center-wrapper">
+    <div class="pickup-container">
+      <div class="pickup-title">결제 방식을 선택해 주세요</div>
 
-  <button class="payment-button" onclick="goToPayment('card')">신용카드</button>
-  <button class="payment-button" onclick="goToPayment('bank')">실시간 계좌이체</button>
-  <button class="payment-button" onclick="goToPayment('kakaopay')">
-    <img src="image/pay/kakao.png" alt="카카오페이" />카카오페이
-  </button>
-  <button class="payment-button" onclick="goToPayment('naverpay')">
-    <img src="image/pay/naver.png" alt="네이버페이" />네이버페이
-  </button>
-  <button class="payment-button" onclick="goToPayment('tosspay')">
-    <img src="image/pay/toss.png" alt="토스페이" />토스페이
-  </button>
-  <button class="payment-button" onclick="goToPayment('payco')">
-    <img src="image/pay/payco.png" alt="페이코" />PAYCO 간편결제
-  </button>
+      <button class="pickup-button" onclick="goToPayment('card')">신용카드</button>
+      <button class="pickup-button" onclick="goToPayment('bank')">실시간 계좌이체</button>
+      <button class="pickup-button" onclick="goToPayment('kakaopay')">
+        <img src="image/pay/kakao.png" alt="카카오페이" class="icon" /> 카카오페이
+      </button>
+      <button class="pickup-button" onclick="goToPayment('naverpay')">
+        <img src="image/pay/naver.png" alt="네이버페이" class="icon" /> 네이버페이
+      </button>
+      <button class="pickup-button" onclick="goToPayment('tosspay')">
+        <img src="image/pay/toss.png" alt="토스페이" class="icon" /> 토스페이
+      </button>
+      <button class="pickup-button" onclick="goToPayment('payco')">
+        <img src="image/pay/payco.png" alt="페이코" class="icon" /> PAYCO 간편결제
+      </button>
+    </div>
+  </div>
 
   <script>
     function goToPayment(method) {
-      const orderType = new URLSearchParams(window.location.search).get("method"); // pickup or delivery
+      const orderType = new URLSearchParams(window.location.search).get("method");
+      const baseUrl = "https://fra422.com/pay";
 
-      if (orderType === "pickup") {
-        window.location.href = `https://fra422.com/pay/pickup/${method}`;
-      } else {
-        window.location.href = `https://fra422.com/pay/delivery/${method}`;
-      }
+      window.location.href = `${baseUrl}/${orderType || 'pickup'}/${method}`;
     }
   </script>
 </body>
