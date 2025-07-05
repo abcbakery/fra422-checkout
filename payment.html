@@ -1,0 +1,18 @@
+<!-- payment.html -->
+<h2>결제 방식을 선택해 주세요</h2>
+
+<button onclick="goToPayment('kakaopay')">
+  <img src="kakao.png" alt="카카오페이" /> 카카오페이
+</button>
+
+<script>
+function goToPayment(method) {
+  const orderType = new URLSearchParams(window.location.search).get("method"); // pickup or delivery
+
+  if (orderType === 'pickup') {
+    window.location.href = `https://fra422.com/pay/pickup/${method}`;
+  } else {
+    window.location.href = `https://fra422.com/pay/delivery/${method}`;
+  }
+}
+</script>
