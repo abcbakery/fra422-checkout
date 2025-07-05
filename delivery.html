@@ -20,6 +20,7 @@
 
   <script>
     function selectMethod(method) {
+      console.log("선택된 수령 방법:", method);  // ✅ 추가
       const cartData = JSON.parse(localStorage.getItem('cartItems'));
       console.log('장바구니:', cartData);
 
