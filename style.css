@@ -14,7 +14,7 @@ body {
 .section-title {
   font-size: 14px;
   font-weight: bold;
-  margin: 12px 0 4px 0; /* 위 12px, 아래 4px */
+  margin: 20px 0 8px 0; /* 위 12px, 아래 4px */
   padding: 0 10px;
 }
 .product-item {
