@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수령 방법 선택</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src="image/logo.png" alt="FRA422 로고" class="logo" />
+
+  <div class="pickup-container">
+    <div class="pickup-title">상품을 어떻게 수령하시겠어요?</div>
+
+    <button class="pickup-button" onclick="selectMethod('pickup')">현장 픽업</button>
+    <button class="pickup-button" onclick="selectMethod('delivery')">배송</button>
+  </div>
+
+  <script>
+    function selectMethod(method) {
+      const cartData = JSON.parse(localStorage.getItem('cartData'));
+      console.log('장바구니:', cartData);
+
+      if (method === 'pickup') {
+        alert('현장 픽업을 선택하셨습니다.');
+        // 예: window.location.href = "pickup.html";
+      } else if (method === 'delivery') {
+        alert('배송을 선택하셨습니다.');
+        // 예: window.location.href = "delivery-form.html";
+      }
+    }
+  </script>
+</body>
+</html>
