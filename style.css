@@ -1,0 +1,54 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+.page-title {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+.section-title {
+  padding: 16px 20px 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+}
+.product-name {
+  font-size: 15px;
+}
+.product-price {
+  color: #555;
+  font-size: 14px;
+}
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-controls button {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+}
