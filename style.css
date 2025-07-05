@@ -162,6 +162,12 @@ body {
   transition: background-color 0.2s;
 }
 
+.pickup-button:active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
 .pickup-button:hover {
   background-color: #f5f5f5;
 }
