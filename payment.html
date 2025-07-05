@@ -6,7 +6,7 @@
   <title>결제 방식 선택</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="payment-page">
   <img src="image/logo.png" alt="FRA422 로고" class="logo" />
 
   <div class="center-wrapper">
@@ -34,7 +34,6 @@
     function goToPayment(method) {
       const orderType = new URLSearchParams(window.location.search).get("method");
       const baseUrl = "https://fra422.com/pay";
-
       window.location.href = `${baseUrl}/${orderType || 'pickup'}/${method}`;
     }
   </script>
