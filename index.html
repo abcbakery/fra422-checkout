@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRA422 - Perfume Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page" id="menuPage">
+    <h2 class="title">원하시는 상품을 선택해 주세요</h2>
+    <h3 class="section-title">PERFUME</h3>
+    <div class="product-list" id="perfumeList"></div>
+
+    <h3 class="section-title">TRAVEL-SIZE PERFUME</h3>
+    <div class="product-list" id="travelPerfumeList"></div>
+
+    <div class="footer">
+      <button class="buy-button" onclick="goToDelivery()">구매하기 / <span id="totalCount">0</span>개<br><span id="totalPrice">0 원</span></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
