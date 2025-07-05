@@ -9,16 +9,18 @@
 <body>
   <img src="image/logo.png" alt="FRA422 로고" class="logo" />
 
-  <div class="pickup-container">
-    <div class="pickup-title">원하시는 수령 방법을 선택해 주세요.</div>
+  <div class="center-wrapper">
+    <div class="pickup-container">
+      <div class="pickup-title">상품을 어떻게 수령하시겠어요?</div>
 
-    <button class="pickup-button" onclick="selectMethod('pickup')">현장 픽업</button>
-    <button class="pickup-button" onclick="selectMethod('delivery')">배송</button>
+      <button class="pickup-button" onclick="selectMethod('pickup')">현장 픽업</button>
+      <button class="pickup-button" onclick="selectMethod('delivery')">배송</button>
+    </div>
   </div>
 
   <script>
     function selectMethod(method) {
-      const cartData = JSON.parse(localStorage.getItem('cartData'));
+      const cartData = JSON.parse(localStorage.getItem('cartItems'));
       console.log('장바구니:', cartData);
 
       if (method === 'pickup') {
@@ -31,4 +33,5 @@
     }
   </script>
 </body>
+
 </html>
