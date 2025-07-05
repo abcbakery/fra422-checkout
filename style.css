@@ -167,6 +167,7 @@ body {
   color: #000;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-align: center; 
 }
 
 .pickup-button:active {
