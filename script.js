@@ -17,7 +17,7 @@ let globalIndex = 0;
 function createProductItem(name, price, image, index) {
   cart[index] = 0;
   return `
-    <div class="product-item" id="item-${index}" onclick="toggleSelection(${index})">
+    <div class="product-item" id="item-${index}">
       <img class="product-img" src="${image}" />
       <div class="product-info">
         <div class="product-name">${name}</div>
