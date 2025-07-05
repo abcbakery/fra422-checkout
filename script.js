@@ -1,28 +1,26 @@
-
 const productData = {
   "PERFUME": [
-    { name: "퍼퓸 원", price: 119000 },
-    { name: "퍼퓸 투", price: 125000 },
-    { name: "퍼퓸 쓰리", price: 109000 }
+    { name: "퍼퓸 원 (50ML)", price: 119000, image: "img/perfume1.jpg" },
+    { name: "퍼퓸 투 (50ML)", price: 125000, image: "img/perfume2.jpg" }
+  ],
+  "TRAVEL-SIZE PERFUME": [
+    { name: "트래블 퍼퓸 1 (10ML)", price: 48000, image: "img/travel1.jpg" }
   ]
 };
 
 let cart = [];
 let globalIndex = 0;
 
-function createProductItem(name, price, index) {
+function createProductItem(name, price, image, index) {
   cart[index] = 0;
   return `
-    <div class="product-item">
-      <div>
+    <div class="product-item" id="item-${index}" onclick="toggleSelection(${index})">
+      <img class="product-img" src="${image}" />
+      <div class="product-info">
         <div class="product-name">${name}</div>
         <div class="product-price">${price.toLocaleString()} ₩</div>
       </div>
-      <div class="qty-controls">
-        <button onclick="updateQty(${index}, -1)">-</button>
-        <span id="qty-${index}">0</span>
-        <button onclick="updateQty(${index}, 1)">+</button>
-      </div>
+      <div class="qty-controls" id="qty-${index}"></div>
     </div>
   `;
 }
@@ -33,15 +31,35 @@ function renderAllCategories() {
     container.innerHTML += `<h3 class="section-title">${category}</h3>`;
     productData[category].forEach((item, idx) => {
       const index = globalIndex++;
-      container.innerHTML += createProductItem(item.name, item.price, index);
+      container.innerHTML += createProductItem(item.name, item.price, item.image, index);
     });
+  }
+  updateAllQtyViews();
+}
+
+function toggleSelection(index) {
+  cart[index] = cart[index] === 0 ? 1 : 0;
+  updateQtyView(index);
+  updateTotal();
+}
+
+function updateQtyView(index) {
+  const qtyEl = document.getElementById(`qty-${index}`);
+  if (cart[index] === 1) {
+    qtyEl.innerHTML = `
+      <button onclick="toggleSelection(${index}); event.stopPropagation()">-</button>
+      <span>1</span>
+      <button disabled>+</button>
+    `;
+  } else {
+    qtyEl.innerHTML = "";
   }
 }
 
-function updateQty(index, delta) {
-  cart[index] = Math.max(0, cart[index] + delta);
-  document.getElementById(`qty-${index}`).textContent = cart[index];
-  updateTotal();
+function updateAllQtyViews() {
+  for (let i = 0; i < cart.length; i++) {
+    updateQtyView(i);
+  }
 }
 
 function updateTotal() {
@@ -60,7 +78,7 @@ function updateTotal() {
 }
 
 function goToNext() {
-  alert("장바구니 정보: " + cart.map((qty, i) => qty > 0 ? `#${i}: ${qty}` : "").filter(Boolean).join(", "));
+  alert("선택된 상품 수: " + cart.reduce((a, b) => a + b, 0));
 }
 
 renderAllCategories();
