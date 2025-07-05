@@ -5,8 +5,8 @@ body {
 }
 .header {
   font-size: 14px;
-  color: #999;
-  text-align: center;
+  color: #999;           /* 회색 텍스트 */
+  text-align: center;    /* 중앙 정렬 */
   padding: 20px 0 10px;
 }
 .section-title {
