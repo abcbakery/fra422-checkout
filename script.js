@@ -17,7 +17,7 @@ let globalIndex = 0;
 function createProductItem(name, price, image, index) {
   cart[index] = 0;
   return `
-    <div class="product-item" id="item-${index}">
+    <div class="product-item" id="item-${index}" onclick="toggleSelection(${index})">
       <img class="product-img" src="${image}" />
       <div class="product-info">
         <div class="product-name">${name}</div>
@@ -42,9 +42,29 @@ function renderAllCategories() {
 
 function changeQty(index, delta) {
   cart[index] = Math.max(0, cart[index] + delta);
+
+  // 선택 해제 시 전체 상태도 리셋
+  if (cart[index] === 0) {
+    document.getElementById(`item-${index}`).classList.remove("selected");
+  }
+
   updateQtyView(index);
   updateTotal();
 }
+
+function toggleSelection(index) {
+  if (cart[index] === 0) {
+    cart[index] = 1;
+    document.getElementById(`item-${index}`).classList.add("selected");
+  } else {
+    cart[index] = 0;
+    document.getElementById(`item-${index}`).classList.remove("selected");
+  }
+  updateQtyView(index);
+  updateTotal();
+}
+
+
 
 function updateQtyView(index) {
   const qtyEl = document.getElementById(`qty-${index}`);
@@ -57,11 +77,10 @@ function updateQtyView(index) {
       <button onclick="changeQty(${index}, 1); event.stopPropagation()">+</button>
     `;
   } else {
-    qtyEl.innerHTML = `
-      <button onclick="changeQty(${index}, 1); event.stopPropagation()">+</button>
-    `;
+    qtyEl.innerHTML = ``; // 아무것도 안 보여줌
   }
 }
+
 
 
 function updateAllQtyViews() {
