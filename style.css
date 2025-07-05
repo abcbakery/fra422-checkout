@@ -69,13 +69,32 @@ body {
 .footer {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background: black;
+  background-color: black;
   color: white;
-  padding: 14px 20px;
-  font-size: 16px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  box-sizing: border-box;
+  align-items: center;
+  font-family: inherit;
+  z-index: 1000;
 }
+
+.buy-button {
+  all: unset; /* 버튼 기본 스타일 제거 */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+  color: white;
+}
+
+.buy-button span:last-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+
