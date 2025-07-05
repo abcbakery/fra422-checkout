@@ -121,3 +121,41 @@ body {
   margin-top: 4px;
   letter-spacing: 0.2px; /* 📌 가격은 살짝 여유 있게 */
 }
+
+
+.logo {
+  width: 120px;
+  display: block;
+  margin: 60px auto 40px;
+}
+
+.pickup-container {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.pickup-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.pickup-button {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto 16px;
+  padding: 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pickup-button:hover {
+  background-color: #f5f5f5;
+}
