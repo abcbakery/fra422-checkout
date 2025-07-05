@@ -15,17 +15,19 @@ body {
   padding: 10px 15px;
   font-weight: bold;
   font-size: 16px;
+  margin: 24px 0 8px 0; /* 위 아래 간격을 줄임 (기존보다 작게) */
 }
 .product-item {
   display: flex;
   align-items: center;
   padding: 12px 20px;
   border-bottom: 1px solid #eee;
+  margin-bottom: 8px;  /* 제품 간 간격도 줄이기 */
   cursor: pointer;
 }
 .product-item.selected {
   background-color: #f0f0f0;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 .product-img {
   width: 72px;      /* 기존 60px → 72px */
