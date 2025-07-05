@@ -14,7 +14,7 @@ body {
 .section-title {
   font-size: 14px;
   font-weight: bold;
-  margin: 15px 0 8px 0; /* 위 12px, 아래 4px */
+  margin: 10px 0 4px 0; /* 위 12px, 아래 4px */
   padding: 0 10px;
 }
 .product-item {
@@ -22,7 +22,7 @@ body {
   align-items: center;
   padding: 12px 20px;
   border-bottom: 1px solid #eee;
-  margin-bottom: 8px;  /* 제품 간 간격도 줄이기 */
+  margin-bottom: 4px;  /* 제품 간 간격도 줄이기 */
   cursor: pointer;
 }
 .product-item.selected {
