@@ -172,6 +172,6 @@ function goToNext() {
   localStorage.setItem("cartItems", JSON.stringify(selectedItems));
 
   // 페이지 이동
-  location.href = "checkout.html";
+  location.href = "delivery.html";
 }
 
